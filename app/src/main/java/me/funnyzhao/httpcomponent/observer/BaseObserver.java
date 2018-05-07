@@ -19,6 +19,8 @@ public abstract class BaseObserver<T> implements Observer<T> {
     @Override
     public void onError(Throwable e) {
         String error = ApiException.handleException(e).getMessage();
+        //调用error之前隐藏dialog
+        hideDialog();
         _onError(error);
     }
 

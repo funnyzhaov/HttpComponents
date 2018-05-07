@@ -30,7 +30,19 @@ public class HttpUtil {
         mContext=app;
     }
 
+    /**
+     * 开始配置
+     * @return
+     */
     public GHttpAllocator startConfig(){
+        return GHttpAllocator.getInstance();
+    }
+
+    /**
+     * 添加配置
+     * @return
+     */
+    public GHttpAllocator addConfig(){
         return GHttpAllocator.getInstance();
     }
 

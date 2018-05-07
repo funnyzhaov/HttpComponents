@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.File;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -43,6 +44,15 @@ public class GHttpAllocator {
      */
     public GHttpAllocator setBaseUrl(String baseUrl) {
         getGlobalRetrofitBuilder().baseUrl(baseUrl);
+        return this;
+    }
+
+    /**
+     * 移除请求头
+     * @return
+     */
+    public  GHttpAllocator removeHeaders(List<String> headerNames) {
+        getGlobalOkHttpBuilder().addInterceptor(new HeaderInterceptor(headerNames,true));
         return this;
     }
 

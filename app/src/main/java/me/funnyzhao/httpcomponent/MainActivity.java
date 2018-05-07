@@ -1,9 +1,9 @@
 package me.funnyzhao.httpcomponent;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-import java.util.TreeMap;
+import java.util.HashMap;
 
 import me.funnyzhao.httpcomponent.observer.BaseObserver;
 import me.funnyzhao.httpcomponent.observer.Transformer;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 .setReadTimeout(10)
                 .setWriteTimeout(10)
                 .setLog(true)
-                .setHeaders(new TreeMap<String, Object>());
+                .setHeaders(new HashMap<String, Object>());
         //业务层调用
         HttpUtil.createApi(TestApi.class)
                 .getBook()
