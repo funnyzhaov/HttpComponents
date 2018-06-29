@@ -27,11 +27,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //依赖
-    api "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjava2}"
-    api "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroid}"
-    api "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit}"
-    api "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.rxjava2adapter}"
-    api "com.squareup.retrofit2:converter-gson:${rootProject.ext.gson}"
-    api "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.interceptor}"
-    api "com.orhanobut:logger:${rootProject.ext.logger}"
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjava2}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroid}"
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.rxjava2adapter}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.gson}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.interceptor}"
+    implementation "com.orhanobut:logger:${rootProject.ext.logger}"
+    //json
+    implementation 'com.alibaba:fastjson:1.1.68.android'
 }
