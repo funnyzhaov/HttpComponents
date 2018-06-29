@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
     
     
     
-        //-----------------------------------适应业务，改造请求体-----------------------------------------------
+        //-----------------------------------适应业务，添加请求头信息-----------------------------------------------
         
-        //1.初始设置请求头信息，此方法可多次调用，调用后，在发起新的请求前，需要充值Api对象
+        //1.初始设置请求头信息，此方法可多次调用，调用后，在发起新的请求前，需要重置Api对象
         HttpUtil.getInstance().startConfig().addHeaderInit(new HashMap<String, Object>());
         mApi=HttpUtil.createApi(TestApi.class);
         
